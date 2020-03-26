@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+    //end
+	window.onload = function(){
+    	var address=ip.address();
+    	document.getElementById('IPandPort').innerHTML = "http://"+address+":3000";
+	};
+    //end
+    </script>
+    <meta charset="UTF-8">
+    <title>QShare</title>
+
+    <!-- start -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- end -->
+
+    <!-- Custom CSS -->
+    <link href="./assets/css/photon.min.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <style type="text/css">
+
+
+  #IPandPort {
+    color: #0af;
+    font-family: monospace;
+    line-height: 40px;
+  }
+
+  /*.hidden{
+   display:none;
+  }*/
+  * {
+  box-sizing: border-box;
+}
+/* Create two equal columns that floats next to each other */
+.column1 {
+float: left;
+width: 65%;
+padding: 10px;
+height: 100vh; /* must be equal to window size */
+}
+.column2 {
+float: left;
+width: 35%;
+margin : 0px;
+height: 100vh; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+  </style>
+
+</head>
+
+<body>
+
+    <div class="window">
+        <header class="toolbar toolbar-header">
+            <div class="wincontrols">
+                <div class="wincontrol winclose"></div>
+                <!-- <div class="wincontrol winmax"></div> -->
+                <div class="wincontrol winmini"></div>
+            </div>
+            <h1 class="title">QShare</h1>
+        </header>
+
+
+
+
+        <div class="row">
+  <div class="column1" style="background-color:#fff;">
+
+    <!--start-->
+    <div class="container">
+ <div class="jumbotron">
+          <p class="alert alert-info" id="drag-file">Drag your file here.</p>
+       </div>
+<!--end-->
+    </div>
+
+
+    <!--<div id="fileList" class="list-group">
+    </div>-->
+  <!--  <a href="./files/app.js" download>karna</a>-->
+
+  <div id="tester" class="list-group">
+  </div>
+
+
+
+  </div>
+  <div class="column2" style="background-color:#fff;margin:0px;padding:0px;">
+     <div id="app" class="window-content" >
+
+
+        <div class="form-group" style="margin:40px;" >
+                      <!-- <input type="text" class="form-control" placeholder="Enter anything to convert" v-model="plainText"> -->
+            <center><p><img src="Qshare.png" height="260" width="260" style="margin:0px;padding:0px"> </p>
+            <img :src="setImage()" height="200" width="200" style="margin:0px;padding:0px;">
+            <p style="font-size:20px;margin:0px;padding:0px;"> Scan Me</p>
+
+          <p style="font-size:20px;padding-right:120px" id="IPandPort" > &nbsp; &nbsp;</p></center>
+
+        </div>
+
+       </div>
+
+
+
+    <!--start-->
+
+
+<!--end-->
+    </div>
+
+  </div>
+</div>
+
+
+
+
+     </div>
+
+</body>
+
+
+<script>
+    if (typeof module === 'object') {
+        window.module = module;
+        module = undefined;
+    }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/vue.min.js"></script>
+<script src="./assets/js/lodash.min.js"></script>
+<script src="convert.js"></script>
+<!--
+<script>
+var tests=["lol.txt"];
+var fileList = document.getElementById('fileList');
+fileList.innerHTML = tests.map(function(test) {
+      return `<div class="list-item">
+        <a href="./files/`+test+`" class="list-group-item" download>`+test+`</a>
+      </div>`;
+    }).join('');
+
+</script>
+-->
+<script>
+    if (window.module) module = window.module;
+</script>
+
+</html>

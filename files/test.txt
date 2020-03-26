@@ -1,0 +1,31 @@
+<!--start-->
+        <div class="container">
+	   <div id="fileList">
+              Hello
+           </div>
+	<!--end-->	
+        </div>
+
+
+
+//const filesFolderPath = path.join(__dirname,'/file');
+
+
+
+
+
+
+
+
+
+
+
+      var dragger= document.getElementById("fileList");
+      /*dragger.innerHTML="";*/ 
+      dragger.innerText="lol";
+
+
+
+
+
+
